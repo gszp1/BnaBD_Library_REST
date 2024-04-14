@@ -3,6 +3,7 @@ package org.example.library_rest.controllers;
 import org.example.library_rest.key.AuthorBookPrimaryKey;
 import org.example.library_rest.model.AuthorBook;
 import org.example.library_rest.service.AuthorBookService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,6 +15,7 @@ public class AuthorBookController {
 
     private final AuthorBookService authorBookService;
 
+    @Autowired
     public AuthorBookController(AuthorBookService authorBookService) {
         this.authorBookService = authorBookService;
     }

@@ -1,6 +1,5 @@
 package org.example.library_rest.controllers;
 
-import org.aspectj.apache.bcel.classfile.Module;
 import org.example.library_rest.model.BookUser;
 import org.example.library_rest.service.BookUserService;
 import org.springframework.beans.factory.annotation.Autowired;

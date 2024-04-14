@@ -43,7 +43,7 @@ public class GenreBookController {
     }
 
     @DeleteMapping("/delete")
-    public void deleteGenreBook(@RequestParam("bookId") Long id, @RequestParam("genreId")Long genreId) {
+    public void deleteGenreBook(@RequestParam("bookId") Long id, @RequestParam("genreId") Long genreId) {
         genreBookService.deleteById(new GenreBookPrimaryKey(genreId, id));
     }
 }

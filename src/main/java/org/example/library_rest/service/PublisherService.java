@@ -18,23 +18,23 @@ public class PublisherService {
         this.publisherRepository = publisherRepository;
     }
 
-    public List<Publisher> getAllPublishers(){
+    public List<Publisher> getAllPublishers() {
         return publisherRepository.findAll();
     }
 
-    public Optional<Publisher> getPublisher(Long id){
+    public Optional<Publisher> getPublisher(Long id) {
         return publisherRepository.findById(id);
     }
 
-    public Publisher savePublisher(Publisher publisher){
+    public Publisher savePublisher(Publisher publisher) {
         return publisherRepository.save(publisher);
     }
 
-    public void deletePublisher(Long id){
+    public void deletePublisher(Long id) {
         publisherRepository.deleteById(id);
     }
 
-    public Publisher updatePublisher(Publisher publisher){
+    public Publisher updatePublisher(Publisher publisher) {
         return publisherRepository.save(publisher);
     }
 }

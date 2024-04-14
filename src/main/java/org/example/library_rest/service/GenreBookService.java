@@ -3,7 +3,6 @@ package org.example.library_rest.service;
 import org.example.library_rest.key.GenreBookPrimaryKey;
 import org.example.library_rest.model.GenreBook;
 import org.example.library_rest.repository.GenreBookRepository;
-import org.example.library_rest.repository.GenreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
