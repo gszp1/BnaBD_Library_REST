@@ -30,11 +30,11 @@ public class GenreService {
         return genreRepository.save(genre);
     }
 
-    public void deleteGenreById(Long id) {
-        genreRepository.deleteById(id);
-    }
-
     public Genre updateGenre(Genre genre) {
         return genreRepository.save(genre);
+    }
+
+    public void deleteGenreById(Long id) {
+        genreRepository.deleteById(id);
     }
 }

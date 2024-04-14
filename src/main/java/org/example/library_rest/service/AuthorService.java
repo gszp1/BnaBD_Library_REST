@@ -30,12 +30,11 @@ public class AuthorService {
         return authorRepository.save(author);
     }
 
-    public void deleteAuthorById(Long id) {
-        authorRepository.deleteById(id);
-    }
-
     public Author updateAuthor(Author author) {
         return authorRepository.save(author);
     }
 
+    public void deleteAuthorById(Long id) {
+        authorRepository.deleteById(id);
+    }
 }

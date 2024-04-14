@@ -30,11 +30,11 @@ public class UserDataService {
         return userDataRepository.save(userData);
     }
 
-    public void deleteUserData(Long id) {
-        userDataRepository.deleteById(id);
-    }
-
     public UserData updateUserData(UserData userData) {
         return userDataRepository.save(userData);
+    }
+    
+    public void deleteUserData(Long id) {
+        userDataRepository.deleteById(id);
     }
 }

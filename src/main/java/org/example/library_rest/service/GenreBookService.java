@@ -12,7 +12,7 @@ import java.util.Optional;
 @Service
 public class GenreBookService {
 
-    private GenreBookRepository genreBookRepository;
+    private final GenreBookRepository genreBookRepository;
 
     @Autowired
     public GenreBookService(GenreBookRepository genreBookRepository) {
@@ -27,7 +27,7 @@ public class GenreBookService {
         return genreBookRepository.findById(genreBookPrimaryKey);
     }
 
-    public GenreBook save(GenreBook genreBook) {
+    public GenreBook saveGenreBook(GenreBook genreBook) {
         return genreBookRepository.save(genreBook);
     }
 

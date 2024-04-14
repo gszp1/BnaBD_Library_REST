@@ -21,27 +21,27 @@ public class KeywordController {
 
     @GetMapping("/all")
     public List<Keyword> findAll() {
-        return keywordService.findAll();
+        return keywordService.getAllKeywords();
     }
 
     @GetMapping("/{id}")
     public Keyword findById(@PathVariable("id") Long id) {
-        Optional<Keyword> keyword = keywordService.findById(id);
+        Optional<Keyword> keyword = keywordService.getKeywordById(id);
         return keyword.orElse(null);
     }
 
     @PostMapping("/add")
     public Keyword save(@RequestBody Keyword keyword) {
-        return keywordService.save(keyword);
+        return keywordService.saveKeyword(keyword);
     }
 
     @DeleteMapping("/delete")
     public void deleteById(@RequestParam("id") Long id) {
-        keywordService.deleteById(id);
+        keywordService.deleteKeywordById(id);
     }
 
     @PutMapping("/update")
     public Keyword update(@RequestBody Keyword keyword) {
-        return keywordService.update(keyword);
+        return keywordService.updateKeyword(keyword);
     }
 }

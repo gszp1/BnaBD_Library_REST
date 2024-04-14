@@ -22,7 +22,7 @@ public class NewsController {
 
     @GetMapping("/all")
     public List<News> getNews() {
-        return newsService.getNews();
+        return newsService.getAllNews();
     }
 
     @GetMapping("/{id}")

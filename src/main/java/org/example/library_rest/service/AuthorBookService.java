@@ -23,7 +23,15 @@ public class AuthorBookService {
         return authorBookRepository.findAll();
     }
 
+    public Optional<AuthorBook> getAuthorBookById(AuthorBookPrimaryKey authorBookPrimaryKey) {
+        return authorBookRepository.findById(authorBookPrimaryKey);
+    }
+
     public AuthorBook saveAuthorBook(AuthorBook authorBook) {
+        return authorBookRepository.save(authorBook);
+    }
+
+    public AuthorBook updateAuthorBook(AuthorBook authorBook) {
         return authorBookRepository.save(authorBook);
     }
 
@@ -31,11 +39,4 @@ public class AuthorBookService {
         authorBookRepository.deleteById(authorBookPrimaryKey);
     }
 
-    public Optional<AuthorBook> getAuthorBookById(AuthorBookPrimaryKey authorBookPrimaryKey) {
-        return authorBookRepository.findById(authorBookPrimaryKey);
-    }
-
-    public AuthorBook updateAuthorBook(AuthorBook authorBook) {
-        return authorBookRepository.save(authorBook);
-    }
 }

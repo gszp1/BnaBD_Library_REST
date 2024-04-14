@@ -18,23 +18,24 @@ public class KeywordService {
         this.keywordRepository = keywordRepository;
     }
 
-    public List<Keyword> findAll() {
+    public List<Keyword> getAllKeywords() {
         return keywordRepository.findAll();
     }
 
-    public Optional<Keyword> findById(Long id) {
+    public Optional<Keyword> getKeywordById(Long id) {
         return keywordRepository.findById(id);
     }
 
-    public Keyword save(Keyword keyword) {
+    public Keyword saveKeyword(Keyword keyword) {
         return keywordRepository.save(keyword);
     }
 
-    public void deleteById(Long id) {
+    public Keyword updateKeyword(Keyword keyword) {
+        return keywordRepository.save(keyword);
+    }
+
+    public void deleteKeywordById(Long id) {
         keywordRepository.deleteById(id);
     }
 
-    public Keyword update(Keyword keyword) {
-        return keywordRepository.save(keyword);
-    }
 }

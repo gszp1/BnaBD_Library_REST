@@ -34,12 +34,12 @@ public class GenreBookController {
 
     @PostMapping("/add")
     public GenreBook addGenreBook(@RequestBody GenreBook genreBook) {
-        return genreBookService.save(genreBook);
+        return genreBookService.saveGenreBook(genreBook);
     }
 
     @PutMapping("/update")
     public GenreBook updateGenreBook(@RequestBody GenreBook genreBook) {
-        return genreBookService.save(genreBook);
+        return genreBookService.saveGenreBook(genreBook);
     }
 
     @DeleteMapping("/delete")

@@ -30,11 +30,11 @@ public class PublisherService {
         return publisherRepository.save(publisher);
     }
 
-    public void deletePublisher(Long id) {
-        publisherRepository.deleteById(id);
-    }
-
     public Publisher updatePublisher(Publisher publisher) {
         return publisherRepository.save(publisher);
+    }
+
+    public void deletePublisher(Long id) {
+        publisherRepository.deleteById(id);
     }
 }

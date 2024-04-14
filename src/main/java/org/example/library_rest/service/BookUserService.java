@@ -24,7 +24,7 @@ public class BookUserService {
         return bookUserRepository.findById(id);
     }
 
-    public BookUser createBookUser(BookUser bookUser) {
+    public BookUser saveBookUser(BookUser bookUser) {
         return bookUserRepository.save(bookUser);
     }
 

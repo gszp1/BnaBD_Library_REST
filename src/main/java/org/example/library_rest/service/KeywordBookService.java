@@ -12,7 +12,7 @@ import java.util.Optional;
 @Service
 public class KeywordBookService {
 
-    private KeywordBookRepository keywordBookRepository;
+    private final KeywordBookRepository keywordBookRepository;
 
     @Autowired
     public KeywordBookService(KeywordBookRepository keywordBookRepository) {
@@ -31,11 +31,11 @@ public class KeywordBookService {
         return keywordBookRepository.save(keywordBook);
     }
 
-    public void deleteKeywordBook(KeywordBookPrimaryKey keywordBookPrimaryKey) {
-        keywordBookRepository.deleteById(keywordBookPrimaryKey);
-    }
-
     public KeywordBook updateKeywordBook(KeywordBook keywordBook) {
         return keywordBookRepository.save(keywordBook);
+    }
+
+    public void deleteKeywordBook(KeywordBookPrimaryKey keywordBookPrimaryKey) {
+        keywordBookRepository.deleteById(keywordBookPrimaryKey);
     }
 }
