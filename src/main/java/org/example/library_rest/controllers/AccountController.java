@@ -25,8 +25,9 @@ public class AccountController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Account> getAccountById(@PathVariable("id") Long id) {
-        return accountService.getAccountById(id);
+    public Account getAccountById(@PathVariable("id") Long id) {
+        Optional<Account> account = accountService.getAccountById(id);
+        return account.orElse(null);
     }
 
     @PostMapping("/add")
