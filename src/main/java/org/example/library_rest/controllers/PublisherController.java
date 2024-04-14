@@ -36,13 +36,13 @@ public class PublisherController {
         return publisherService.savePublisher(publisher);
     }
 
-    @DeleteMapping("/delete")
-    public void deletePublisher(@RequestParam("id") Long id) {
-        publisherService.deletePublisher(id);
-    }
-
     @PutMapping("/update")
     public Publisher updatePublisher(@RequestBody Publisher publisher) {
         return publisherService.updatePublisher(publisher);
+    }
+
+    @DeleteMapping("/delete")
+    public void deletePublisher(@RequestParam("id") Long id) {
+        publisherService.deletePublisher(id);
     }
 }

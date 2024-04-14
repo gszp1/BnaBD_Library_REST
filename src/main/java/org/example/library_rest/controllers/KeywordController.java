@@ -20,28 +20,28 @@ public class KeywordController {
     }
 
     @GetMapping("/all")
-    public List<Keyword> findAll() {
+    public List<Keyword> getAllKeywords() {
         return keywordService.getAllKeywords();
     }
 
     @GetMapping("/{id}")
-    public Keyword findById(@PathVariable("id") Long id) {
+    public Keyword getKeywordById(@PathVariable("id") Long id) {
         Optional<Keyword> keyword = keywordService.getKeywordById(id);
         return keyword.orElse(null);
     }
 
     @PostMapping("/add")
-    public Keyword save(@RequestBody Keyword keyword) {
+    public Keyword addKeyword(@RequestBody Keyword keyword) {
         return keywordService.saveKeyword(keyword);
     }
 
     @DeleteMapping("/delete")
-    public void deleteById(@RequestParam("id") Long id) {
+    public void deleteKeyword(@RequestParam("id") Long id) {
         keywordService.deleteKeywordById(id);
     }
 
     @PutMapping("/update")
-    public Keyword update(@RequestBody Keyword keyword) {
+    public Keyword updateKeyword(@RequestBody Keyword keyword) {
         return keywordService.updateKeyword(keyword);
     }
 }

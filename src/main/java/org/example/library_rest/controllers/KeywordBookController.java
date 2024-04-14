@@ -21,29 +21,29 @@ public class KeywordBookController {
     }
 
     @GetMapping("/all")
-    public List<KeywordBook> getAll() {
+    public List<KeywordBook> getAllKeywordBooks() {
         return keywordBookService.getAllKeywordBooks();
     }
 
     @GetMapping("/id")
-    public KeywordBook getById(@RequestParam("bookId") Long bookId, @RequestParam("keywordId") Long keywordId) {
+    public KeywordBook getKeywordBookById(@RequestParam("bookId") Long bookId, @RequestParam("keywordId") Long keywordId) {
         Optional<KeywordBook> keywordBook = keywordBookService
                 .getKeywordBookById(new KeywordBookPrimaryKey(keywordId, bookId));
         return keywordBook.orElse(null);
     }
 
     @PostMapping("/add")
-    public KeywordBook add(@RequestBody KeywordBook keywordBook) {
+    public KeywordBook addKeywordBook(@RequestBody KeywordBook keywordBook) {
         return keywordBookService.saveKeywordBook(keywordBook);
     }
 
     @PutMapping("/update")
-    public KeywordBook update(@RequestBody KeywordBook keywordBook) {
+    public KeywordBook updateKeywordBook(@RequestBody KeywordBook keywordBook) {
         return keywordBookService.updateKeywordBook(keywordBook);
     }
 
     @DeleteMapping("/delete")
-    public void delete(@RequestParam("bookId") Long bookId, @RequestParam("keywordId") Long keywordId) {
+    public void deleteKeywordBook(@RequestParam("bookId") Long bookId, @RequestParam("keywordId") Long keywordId) {
         keywordBookService.deleteKeywordBook(new KeywordBookPrimaryKey(bookId, keywordId));
     }
 

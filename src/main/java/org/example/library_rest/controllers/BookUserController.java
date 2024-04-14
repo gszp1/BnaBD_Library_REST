@@ -31,8 +31,8 @@ public class BookUserController {
     }
 
     @PostMapping("/add")
-    public BookUser createBookUser(@RequestBody BookUser bookUser) {
-        return bookUserService.createBookUser(bookUser);
+    public BookUser addBookUser(@RequestBody BookUser bookUser) {
+        return bookUserService.saveBookUser(bookUser);
     }
 
     @PutMapping("/update")

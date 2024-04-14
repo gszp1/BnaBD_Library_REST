@@ -21,7 +21,7 @@ public class UserDataController {
     }
 
     @GetMapping("/all")
-    public List<UserData> getUserData() {
+    public List<UserData> getAllUserData() {
         return userDataService.getUserData();
     }
 
@@ -32,17 +32,17 @@ public class UserDataController {
     }
 
     @PostMapping("/add")
-    public UserData saveUserData(@RequestBody UserData userData) {
+    public UserData addUserData(@RequestBody UserData userData) {
         return userDataService.saveUserData(userData);
-    }
-
-    @DeleteMapping("/delete")
-    public void deleteUserData(@RequestParam("id") Long id) {
-        userDataService.deleteUserData(id);
     }
 
     @PutMapping("/update")
     public UserData updateUserData(@RequestBody UserData userData) {
         return userDataService.updateUserData(userData);
+    }
+
+    @DeleteMapping("/delete")
+    public void deleteUserData(@RequestParam("id") Long id) {
+        userDataService.deleteUserData(id);
     }
 }

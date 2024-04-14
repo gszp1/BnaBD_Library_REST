@@ -31,17 +31,17 @@ public class BookController {
     }
 
     @PostMapping("/add")
-    public Book saveBook(@RequestBody Book book) {
+    public Book addBook(@RequestBody Book book) {
         return bookService.saveBook(book);
-    }
-
-    @DeleteMapping("/delete")
-    public void deleteBookById(@RequestParam("id") Long id) {
-        bookService.deleteBookById(id);
     }
 
     @PutMapping("/update")
     public Book updateBook(@RequestBody Book book) {
         return bookService.updateBook(book);
+    }
+
+    @DeleteMapping("/delete")
+    public void deleteBook(@RequestParam("id") Long id) {
+        bookService.deleteBookById(id);
     }
 }

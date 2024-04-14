@@ -21,7 +21,7 @@ public class NewsController {
     }
 
     @GetMapping("/all")
-    public List<News> getNews() {
+    public List<News> getAllNews() {
         return newsService.getAllNews();
     }
 
@@ -32,7 +32,7 @@ public class NewsController {
     }
 
     @PostMapping("/add")
-    public News createNews(@RequestBody News news) {
+    public News addNews(@RequestBody News news) {
         return newsService.saveNews(news);
     }
 

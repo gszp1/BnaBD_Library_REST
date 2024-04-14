@@ -31,17 +31,17 @@ public class AuthorController {
     }
 
     @PostMapping("/add")
-    public Author saveAuthor(@RequestBody Author author) {
+    public Author addAuthor(@RequestBody Author author) {
         return authorService.saveAuthor(author);
-    }
-
-    @DeleteMapping("/delete")
-    public void deleteAuthorById(@RequestParam("id") Long id) {
-        authorService.deleteAuthorById(id);
     }
 
     @PutMapping("/update")
     public Author updateAuthor(@RequestBody Author author) {
         return authorService.updateAuthor(author);
+    }
+
+    @DeleteMapping("/delete")
+    public void deleteAuthor(@RequestParam("id") Long id) {
+        authorService.deleteAuthorById(id);
     }
 }

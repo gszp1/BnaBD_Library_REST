@@ -31,17 +31,17 @@ public class GenreController {
     }
 
     @PostMapping("/add")
-    public Genre saveGenre(@RequestBody Genre genre) {
+    public Genre addGenre(@RequestBody Genre genre) {
         return genreService.saveGenre(genre);
-    }
-
-    @DeleteMapping("/delete")
-    public void deleteGenreById(@RequestParam("id") Long id) {
-        genreService.deleteGenreById(id);
     }
 
     @PutMapping("/update")
     public Genre updateGenre(@RequestBody Genre genre) {
         return genreService.updateGenre(genre);
+    }
+
+    @DeleteMapping("/delete")
+    public void deleteGenre(@RequestParam("id") Long id) {
+        genreService.deleteGenreById(id);
     }
 }
